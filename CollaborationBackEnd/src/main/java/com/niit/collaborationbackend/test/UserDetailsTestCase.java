@@ -53,10 +53,10 @@ public class UserDetailsTestCase {
 		/*userDetailsCreateTestCase*/
 		userDetails.setId("US001");
 		userDetails.setName("VYSHNAVI");
-		userDetails.setMailid("vyshu@gmail.com");
 		userDetails.setPassword("vyshu");
-		userDetails.setNum("9847807002");
-		userDetails.setAddress("gvr");
+		userDetails.setGender("female");
+		userDetails.setEmail("vyshu@gmail.com");
+		userDetails.setPhone("9847807002");
 		//userDetails.setRole("admin");
 		
 		Assert.assertEquals("userDetailsCreateTestCase", true, userDetailsDAO.save(userDetails));
@@ -67,11 +67,11 @@ public class UserDetailsTestCase {
 		
 		/*userDetailsUpdateTestCase*/
 		userDetails.setId("US001");
-		userDetails.setName("Test Name Updated");
-		userDetails.setMailid("Test Email Updated");
-		userDetails.setPassword("Test Password Updated" );
-		userDetails.setNum("9847807002");
-		userDetails.setAddress("Test Address Updated");
+		userDetails.setName("VYSHNAVI");
+		userDetails.setPassword("vyshu");
+		userDetails.setGender("female");
+		userDetails.setEmail("vyshu@gmail.com");
+		userDetails.setPhone("9847807002");
 		//userDetails.setRole("admin");
 		
 		Assert.assertEquals("userDetailsUpdateTestCase", true, userDetailsDAO.update(userDetails));
