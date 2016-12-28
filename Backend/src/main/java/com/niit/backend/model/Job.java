@@ -10,7 +10,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="c_job")
-
 public class Job {
 	
 	@Id
@@ -18,10 +17,17 @@ public class Job {
 	private int jobId;
 	private String jobTitle;
 	private String jobDescription;
-	//private Date postedOn;
-	//private String skillsRequired;
-	//private String salary;
+	private Date postedOn;
+	private String skillsRequired;
+	private String salary;
+	private String location;
 
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
 	public int getJobId() {
 		return jobId;
 	}
@@ -40,24 +46,24 @@ public class Job {
 	public void setJobDescription(String jobDescription) {
 		this.jobDescription = jobDescription;
 	}
-	//public Date getPostedOn() {
-		//return postedOn;
-	//}
-	//public void setPostedOn(Date postedOn) {
-		//this.postedOn = postedOn;
-	//}
-	//public String getSkillsRequired() {
-		//return skillsRequired;
-	//}
-	//public void setSkillsRequired(String skillsRequired) {
-		//this.skillsRequired = skillsRequired;
-	//}
-	//public String getSalary() {
-		//return salary;
-	//}
-	//public void setSalary(String salary) {
-		//this.salary = salary;
-	//}
+	public Date getPostedOn() {
+		return postedOn;
+	}
+	public void setPostedOn(Date postedOn) {
+		this.postedOn = postedOn;
+	}
+	public String getSkillsRequired() {
+		return skillsRequired;
+	}
+	public void setSkillsRequired(String skillsRequired) {
+		this.skillsRequired = skillsRequired;
+	}
+	public String getSalary() {
+		return salary;
+	}
+	public void setSalary(String salary) {
+		this.salary = salary;
+	}
 
 	
 

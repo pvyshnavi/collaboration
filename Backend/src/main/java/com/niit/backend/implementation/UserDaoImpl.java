@@ -47,16 +47,16 @@ Logger logger= LoggerFactory.getLogger(this.getClass());
 	public void updateUser(User user) 
 	{
 		logger.debug("Entering UserDaoImpl => updateUser()");
-		//logger.debug("isOnline value [before update] is: "+user.isOnline());
+		logger.debug("isOnline value [before update] is: "+user.isOnline());
 		Session session=sessionFactory.openSession();
 		User existingUser=(User)session.get(User.class, user.getId());
 		//update online status as true
-		//existingUser.setOnline(user.isOnline()); 
+		existingUser.setOnline(user.isOnline()); 
 		
 		session.update(existingUser);
 		session.flush();
 		session.close();
-		//logger.debug("isOnline value [after update] is: "+existingUser.isOnline());
+		logger.debug("isOnline value [after update] is: "+existingUser.isOnline());
 	}
 	
 	public User registerUser(User user) 

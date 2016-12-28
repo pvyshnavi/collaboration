@@ -30,14 +30,14 @@ public class User {
 	//enabled - true or false  - active or inactive user 
 	//true - authenticated
 	//false - user cannot login
-	//@Column(name="enabled")
-	//private boolean enabled;
+	@Column(name="enabled")
+	private boolean enabled;
 
 	//inOnline - true, false
 	//user login - make this isOnline as true - login 
 	//user logout - make this isOnline as false - logout
-	//@Column(name="isonline")
-	//private boolean isOnline;
+	@Column(name="isonline")
+	private boolean isOnline;
 
 	public int getId() 
 	{
@@ -89,25 +89,25 @@ public class User {
 		this.role = role;
 	}
 
-	//public boolean isStatus() 
-	//{
-		//return enabled;
-	//}
+	public boolean isStatus() 
+	{
+		return enabled;
+	}
 
-	//public void setStatus(boolean status) 
-	//{
-		//this.enabled = status;
-	//}
+	public void setStatus(boolean status) 
+	{
+		this.enabled = status;
+	}
 
-	//public boolean isOnline() 
-	//{
-		//return isOnline;
-	//}
+	public boolean isOnline() 
+	{
+		return isOnline;
+	}
 
-	//public void setOnline(boolean isOnline) 
-	//{
-		//this.isOnline = isOnline;
-	//}
+	public void setOnline(boolean isOnline) 
+	{
+		this.isOnline = isOnline;
+	}
 
 	@Override
 	public String toString() 

@@ -21,10 +21,10 @@ app.config(function($routeProvider)
 		templateUrl:'_user/register.html'
 	})
 	
-	.when('/jobs',
+	.when('/getAllJobs',
 	{
 		controller:'JobController',
-		templateUrl:'_jobs/jobs.html'
+		templateUrl:'_jobs/jobTitles.html'
 	})
 	
 	.when('/postJob',

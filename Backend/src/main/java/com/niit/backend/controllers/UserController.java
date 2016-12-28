@@ -40,7 +40,7 @@ public class UserController {
 		else
 		{														//isOnline - set true when the user login
 			session.setAttribute("user", validUser);			//isOnline -set false when the user logout
-			//validUser.setOnline(true);
+			validUser.setOnline(true);
 			userDao.updateUser(validUser); 						// to update online status in db
 			logger.debug("validUser is NOT null");
 			return new ResponseEntity<User>(validUser,HttpStatus.OK);							//200
@@ -53,8 +53,8 @@ public class UserController {
 		try
 		{
 		logger.debug("Entering UserController => register() "+user);
-		//user.setStatus(true);
-		//user.setOnline(false);
+		user.setStatus(true);
+		user.setOnline(false);
 		User savedUser=userDao.registerUser(user);
 		logger.debug("User ID generated is: "+savedUser.getId());
 		if(savedUser.getId()==0)
@@ -84,7 +84,7 @@ public class UserController {
 		User user=(User)session.getAttribute("user");
 		if(user!=null)
 		{
-			//user.setOnline(false);
+			user.setOnline(false);
 			userDao.updateUser(user);
 		}
 		session.removeAttribute("user");

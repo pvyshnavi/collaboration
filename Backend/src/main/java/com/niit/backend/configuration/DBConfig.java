@@ -39,7 +39,8 @@ public class DBConfig {
 		    BasicDataSource dataSource = new BasicDataSource();
 		    dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
 		    dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
-		    dataSource.setUsername("collback");
+		   // dataSource.setUsername("collback");
+		    dataSource.setUsername("Collaboration");
 		    dataSource.setPassword("1234");
 		    return dataSource;
 		}
