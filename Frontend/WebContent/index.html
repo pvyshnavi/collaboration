@@ -48,11 +48,20 @@ background-size: cover;
 					<li class="dropdown" >
 						<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.id">Job details<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#/getAllJobs">List of Job Titles</a></li>
 							<li><a href="#/postJob" ng-show="hasRole('ADMIN') || hasRole('EMPLOYEE')">Post a Job</a></li>
+							<li><a href="#/getAllJobs">List of Job Titles</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown" >
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.id">Event details<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/getAllEvents">List of Event Titles</a></li>
+							<li><a href="#/postEvent" ng-show="hasRole('ADMIN') || hasRole('EMPLOYEE')">Post a Event</a></li>
 
 						</ul>
 					</li>
+					
 					
 					<li class="dropdown" >
 						<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.id">Welcome {{currentUser.username}}<span class="glyphicon glyphicon-user"></span><b class="caret"></b></a>
@@ -88,5 +97,8 @@ background-size: cover;
 <script type="text/javascript" src="_user/userservice.js"></script>
 <script type="text/javascript" src="_jobs/jobcontroller.js"></script>
 <script type="text/javascript" src="_jobs/jobservice.js"></script>
+<script type="text/javascript" src="_event/eventcontroller.js"></script>
+<script type="text/javascript" src="_event/eventservice.js"></script>
+
 	
 </html>

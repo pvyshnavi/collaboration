@@ -32,6 +32,19 @@ app.config(function($routeProvider)
 		controller:'JobController',
 		templateUrl:'_jobs/createJob.html'
 	})
+	
+	.when('/getAllEvents',
+	{
+		controller:'EventController',
+		templateUrl:'_event/eventTitles.html'
+	})
+	
+	.when('/postEvent',
+	{
+		controller:'EventController',
+		templateUrl:'_event/createEvent.html'
+	})
+	
 			
 	.when('/',
 	{
