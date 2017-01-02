@@ -16,6 +16,7 @@ public class JobDaoImpl implements JobDao{
 	
 	@Autowired
 	private SessionFactory sessionFactory;
+	
 	public void postJob(Job job) 
 	{
 		Session session=sessionFactory.openSession();
@@ -39,5 +40,4 @@ public class JobDaoImpl implements JobDao{
 		Job job=(Job)session.get(Job.class, jobId);
 		session.close();
 		return job;
-	}
-}
+	}}

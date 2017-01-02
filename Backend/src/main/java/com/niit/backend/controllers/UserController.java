@@ -1,5 +1,9 @@
 package com.niit.backend.controllers;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -16,10 +20,11 @@ import com.niit.backend.dao.UserDao;
 import com.niit.backend.model.User;
 import com.niit.backend.model.Error;
 
+
 @RestController
 public class UserController {
 	
-	Logger logger=LoggerFactory.getLogger(this.getClass()); 
+Logger logger=LoggerFactory.getLogger(this.getClass()); 
 	
 	@Autowired
 	private UserDao userDao;
@@ -91,5 +96,8 @@ public class UserController {
 		session.invalidate();
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
+	
+	
+	
 
 }

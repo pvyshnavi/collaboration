@@ -44,7 +44,6 @@ app.config(function($routeProvider)
 		controller:'EventController',
 		templateUrl:'_event/createEvent.html'
 	})
-	
 			
 	.when('/',
 	{

@@ -1,6 +1,9 @@
 package com.niit.backend.implementation;
 
+import java.util.List;
+
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
@@ -26,6 +29,7 @@ Logger logger= LoggerFactory.getLogger(this.getClass());
 		{
 			this.sessionFactory = sessionFactory;
 		}
+	
 	public User authenticate(User user) 
 	{
 		logger.debug("Entering UserDaoImpl => authenticate()");
@@ -69,5 +73,18 @@ Logger logger= LoggerFactory.getLogger(this.getClass());
 	logger.debug("User ID in Dao: "+ user.getId());
 	return user;
 	}
-
+	
+	public List<User> getAllUsers(User user) 
+	{
+		Session session=sessionFactory.openSession();
+		SQLQuery query=session.createSQLQuery("select * from c_user where username in (select username from c_user where username!=? minus(select to_id from c_friend where from_id=? union select from_id from c_friend where to_id=?))");
+		query.setString(0, user.getUsername());
+		query.setString(1, user.getUsername());
+		query.setString(2, user.getUsername());
+		query.addEntity(User.class);
+		List<User> users=query.list();
+		System.out.println(users);
+		session.close();
+		return users;
+	}
 }

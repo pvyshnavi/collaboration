@@ -14,5 +14,10 @@ app.factory('EventService',function($http)
 		return $http.get(BASE_URL + "/getAllEvents");
 	}
 	
+	eventService.getEventDetail=function(eventId)
+	{
+		return $http.get(BASE_URL + "/getEventDetail/"+eventId);
+	}
+	
 	return eventService;
 })
