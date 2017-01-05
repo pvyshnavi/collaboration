@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insertion</title>
+</head>
+<body>
+
+<div class="container">
+<div class="w3-animate-opacity">
+<h2><strong><u>Post a Event title and its details:</u></strong></h2>
+
+<br>
+<form class="form-horizontal">
+<font face="arial narrow" size="3">
+
+<div class="form-group">
+  <label class="col-md-2 control-label" >Event Description: </label>
+  	<div class="col-md-7">
+	<textarea class="form-control" placeholder="Enter Event description" ng-model="event.eventDescription" ></textarea>
+	</div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" >Event Content: </label>
+  	<div class="col-md-7">
+	<textarea class="form-control" placeholder="Enter Event Content" ng-model="event.eventContent" ></textarea>
+	</div>
+</div>
+
+
+<div class="form-group">
+<div class="col-md-3">
+<button type="submit" class="btn btn-primary btn-block col-md-3" ng-click="saveEvent()">Post</button>
+</div>
+</div>
+
+
+</font>
+</form>
+
+</body>
+</html> 

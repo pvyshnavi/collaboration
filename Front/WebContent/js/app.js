@@ -83,6 +83,19 @@ app.config(function($routeProvider)
 		controller:'BlogDetailController',
 		templateUrl:'_blog/getBlogDetail.html'
 	})
+	
+	.when('/getAllEvents',
+	{
+		controller:'EventController',
+		templateUrl:'_events/eventTitles.html'
+	})
+	
+	.when('/postEvent',
+	{
+		controller:'EventController',
+		templateUrl:'_events/createEvent.html'
+	})
+	
 })
 
 app.run(function($cookieStore,$rootScope,$location,UserService)

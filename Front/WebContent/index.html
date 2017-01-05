@@ -93,12 +93,22 @@ background-position:0 0;
 					</li>
 					
 					<li class="dropdown" >
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.id">Event<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/postEvent" ng-show="currentUser.role=='ADMIN' || currentUser.role=='EMPLOYEE'">Post a Event</a></li>
+							<li><a href="#/getAllEvents">List of Event Titles</a></li>
+						</ul>
+					</li>
+	
+					<li class="dropdown" >
 						<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.id">Jobs<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="#/getAllJobs">List of Job Titles</a></li>
 							<li><a href="#/postJob" ng-show="currentUser.role=='ADMIN' || currentUser.role=='EMPLOYEE'">Post a Job</a></li>
 						</ul>
 					</li>
+					
+					
 					&nbsp;<li ng-show="currentUser.id">
 					<img src="http://localhost:8083/Portal/resources/images/{{currentUser.username}}"  class="img-circle" height="38" width="38">
 					</li>
@@ -144,5 +154,7 @@ background-position:0 0;
 <script type="text/javascript" src="_blog/blogservice.js"></script>
 <script type="text/javascript" src="_blog/blogcontroller.js"></script>
 <script type="text/javascript" src="_blog/blogdetailcontroller.js"></script>
+<script type="text/javascript" src="_events/eventcontroller.js"></script>
+<script type="text/javascript" src="_events/eventservice.js"></script>
 	
 </html>

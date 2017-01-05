@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Event titles</title>
+</head>
+
+<body>
+<div class="w3-animate-opacity">
+<font face="arial narrow" size="4">
+<center>
+<h2><strong><u>List of Event Titles available:</u></strong></h2>
+<br>
+<table>
+
+<tr ng-repeat="event in events">
+<td>
+<a href="" ng-click="getEventDetail(event.eventId)">{{event.eventDescription}}</a>
+</td>
+</tr>
+
+</table>
+</center>
+<br><br>
+
+
+<div ng-show="showEventDetail">
+<div class="w3-animate-opacity">
+<b><u>event Details:</u></b><br>
+Event Description: {{eventDetail.eventDescription}}<br><br>
+Event Content: {{eventDetail.eventContent}}<br><br>
+</div>
+</div>
+</font>
+
+</div>
+</body>
+</html>
