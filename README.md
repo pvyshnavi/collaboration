@@ -2,6 +2,14 @@
 
 
 
-This project is based on a collaboration website which involves chatrooms, obtaining specific information, blogs and all there is to reach a common goal of what the client or the user needs.
+This is my collaboration web project !
 
-The programming tool used is the Eclipse IDE and the programming language used is java, alongside Oracle Database, Spring and Hibernate frameworks at it's backend. For testing the inputs and outputs in the JSON format at the backend, a tool named 'postman' is explicitly used here. The frontend makes use of HTML, CSS, Bootstrap and AngularJS. The project is thus combined in a build tool called Maven, alongside JUnit, all together in a nutshell.
+The different modules in this project are: 1.User 2.Blog 3.Job 4.Friend 5.Forum 6.Event 7.Chat
+
+The different users are: 1.employee-people who are currently working in the organisation 2.student-a present student 3.alumni-people who were earlier a part of the organisation 4.admin-person who has rights to do changes in the website
+
+Technologies used: 1.Spring 2.Hibernate 3.Angular JS 4.HTML 5.CSS 6.Bootstrap
+
+Database: oracle database 11g express edition
+
+Server: Apache Tomcat
