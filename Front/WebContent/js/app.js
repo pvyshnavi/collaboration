@@ -96,6 +96,12 @@ app.config(function($routeProvider)
 		templateUrl:'_events/createEvent.html'
 	})
 	
+	.when('/chat',
+	{
+		controller:'ChatController',
+		templateUrl:'_chat/chatView.html'
+	})
+	
 })
 
 app.run(function($cookieStore,$rootScope,$location,UserService)

@@ -2,6 +2,7 @@ package com.collab.portal.model;
 
 public class Message {
 	
+		
 	private String message;
 	  private int id;
 	  public Message() { }

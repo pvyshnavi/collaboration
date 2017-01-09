@@ -1,9 +1,16 @@
 package com.collab.portal.configuration;
 
+import javax.servlet.ServletRegistration;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
-	
+	/*@Override
+	  protected void customizeRegistration(ServletRegistration.Dynamic registration) {
+	    registration.setInitParameter("dispatchOptionsRequest", "true");
+	    registration.setAsyncSupported(true);
+	  }
+	*/
 	@Override
 	protected Class<?>[] getRootConfigClasses() 
 	{

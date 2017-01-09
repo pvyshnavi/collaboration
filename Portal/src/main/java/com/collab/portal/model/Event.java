@@ -12,13 +12,13 @@ public class Event {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private String eventId;
+	private int eventId;
 	private String eventDescription;
 	private String eventContent;
-	public String getEventId() {
+	public int getEventId() {
 		return eventId;
 	}
-	public void setEventId(String eventId) {
+	public void setEventId(int eventId) {
 		this.eventId = eventId;
 	}
 	public String getEventDescription() {
